@@ -66,21 +66,30 @@ public class Lever : MonoBehaviour
                 }
             }
         }
+
         if (disappearObjects != null)
         {
             foreach (GameObject obj in disappearObjects)
             {
-                if (obj != null)
+                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+                if ((obj != null) && (obj.activeSelf)&&(spriteRenderer.enabled))                  //기본조건 :1.배열에 값이 저장되어 있을것 2.활성화 되어 있을것 3.스프라이트 렌더러가 활성화 되어 있을것
                 {
-                    obj.SetActive(false);
+                    obj.GetComponent<MultiLineDraw>().CreateNewLineGroup();
+
+                    Collider2D collider = obj.GetComponent<Collider2D>();
                     
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.enabled = false;
+                    }
+                    if (collider != null)
+                    {
+                        collider.enabled = false;
+                    }  
                 }
             }
-        }
-        else
-        {
-            Debug.LogWarning("createObjects array is null");
-        }
+        }        
     }
 
 }
