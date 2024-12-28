@@ -100,16 +100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  lineLifeTime: 1
-  lineWidth: 0.1
-  maxLength: 10
+  lineLifeTime: 2.5
+  lineWidth: 0.05
+  maxLength: 5
   drawSpeed: 5
   reflectLayers:
     serializedVersion: 2
-    m_Bits: 0
-  maxReflections: 5
-  lineCount: 18
-  lineMaterial: {fileID: 0}
+    m_Bits: 256
+  maxReflections: 250
+  lineCount: 30
+  lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!61 &664164387472319043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -347,16 +347,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  lineLifeTime: 1
-  lineWidth: 0.1
-  maxLength: 10
+  lineLifeTime: 2.5
+  lineWidth: 0.05
+  maxLength: 5
   drawSpeed: 5
   reflectLayers:
     serializedVersion: 2
-    m_Bits: 0
-  maxReflections: 5
-  lineCount: 18
-  lineMaterial: {fileID: 0}
+    m_Bits: 256
+  maxReflections: 250
+  lineCount: 30
+  lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!61 &3784822997797359577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -519,16 +519,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  lineLifeTime: 1
-  lineWidth: 0.1
-  maxLength: 10
+  lineLifeTime: 2.5
+  lineWidth: 0.05
+  maxLength: 5
   drawSpeed: 5
   reflectLayers:
     serializedVersion: 2
-    m_Bits: 0
-  maxReflections: 5
-  lineCount: 18
-  lineMaterial: {fileID: 0}
+    m_Bits: 256
+  maxReflections: 250
+  lineCount: 30
+  lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!61 &1085660146047164093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -783,16 +783,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  lineLifeTime: 1
-  lineWidth: 0.1
-  maxLength: 10
+  lineLifeTime: 2.5
+  lineWidth: 0.05
+  maxLength: 5
   drawSpeed: 5
   reflectLayers:
     serializedVersion: 2
-    m_Bits: 0
-  maxReflections: 5
-  lineCount: 18
-  lineMaterial: {fileID: 0}
+    m_Bits: 256
+  maxReflections: 250
+  lineCount: 30
+  lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!61 &314474034313647109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1399,16 +1399,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  lineLifeTime: 1
-  lineWidth: 0.1
-  maxLength: 10
+  lineLifeTime: 2.5
+  lineWidth: 0.05
+  maxLength: 5
   drawSpeed: 5
   reflectLayers:
     serializedVersion: 2
-    m_Bits: 0
-  maxReflections: 5
-  lineCount: 18
-  lineMaterial: {fileID: 0}
+    m_Bits: 256
+  maxReflections: 250
+  lineCount: 30
+  lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!61 &6159587199852625053
 BoxCollider2D:
   m_ObjectHideFlags: 0

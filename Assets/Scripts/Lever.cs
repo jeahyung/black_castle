@@ -71,7 +71,7 @@ public class Lever : MonoBehaviour
         {
             foreach (GameObject obj in disappearObjects)
             {
-                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
 
                 if ((obj != null) && (obj.activeSelf)&&(spriteRenderer.enabled))                  //기본조건 :1.배열에 값이 저장되어 있을것 2.활성화 되어 있을것 3.스프라이트 렌더러가 활성화 되어 있을것
                 {
