@@ -7,7 +7,7 @@ public class ViewRange : MonoBehaviour
 
     //음파와 발자국
     public GameObject projectilePrefab;
-    public GameObject stepPrefab;
+    //public GameObject stepPrefab;
 
     //음파 수명
     public float Walk_lifetime;
@@ -49,7 +49,7 @@ public class ViewRange : MonoBehaviour
         //Debug.Log("player stepin");
 
         //발자국
-        Instantiate(stepPrefab, transform.position, Quaternion.identity);
+        //Instantiate(stepPrefab, transform.position, Quaternion.identity);
         
         //Debug.Log(prePos);
         // 음파의 투사체 생성 각도 설정

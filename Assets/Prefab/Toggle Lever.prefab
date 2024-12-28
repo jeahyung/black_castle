@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b18659f61a0a4043b79a792b3c3a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   lineLifeTime: 2.5
   lineWidth: 0.05
