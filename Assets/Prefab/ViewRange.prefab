@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 1af8fc28363b70e43a338978c492440d, type: 3}
-  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684799c096325874291a380403812c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8503189920067293651, guid: d495700f3f883f94db4e88de6dd9a8af, type: 3}
-  stepPrefab: {fileID: 9077456828006656126, guid: e07ecceb4eaeb0b408c504feeafb79a1, type: 3}
+  projectilePrefab: {fileID: 72307247532092661, guid: a5fe921bce3923a4db162eb26236bd8b, type: 3}
   Walk_lifetime: 0.2
   Walk_Shoot_CoolTime: 0.5
