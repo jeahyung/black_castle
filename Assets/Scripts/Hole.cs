@@ -77,7 +77,7 @@ public class Hole : MonoBehaviour
         {
             foreach (GameObject obj in disappearObjects)
             {
-                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
 
                 if ((obj != null) && (obj.activeSelf) && (spriteRenderer.enabled))
                 {
