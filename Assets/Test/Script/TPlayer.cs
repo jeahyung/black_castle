@@ -32,6 +32,10 @@ public class TPlayer : MonoBehaviour
     private Coroutine moveCoroutine;
     private MultiLineDraw line;
 
+    //사운드
+    private AudioSource audioSource;
+    public AudioClip EnemySound;
+
     private void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
@@ -39,6 +43,7 @@ public class TPlayer : MonoBehaviour
         line = GetComponent<MultiLineDraw>();
         currentState = MonsterState.Sleep;
         lastLineCreationTime = Time.time;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -107,7 +112,7 @@ public class TPlayer : MonoBehaviour
                 // 일정 간격으로 라인 생성
                 if (currentTime - lastLineCreationTime >= lineCreationInterval)
                 {
-                    //사운드========================================================================================================================
+                    PlaySound(EnemySound);
                     line.CreateNewLineGroup();
                     lastLineCreationTime = currentTime;
                 }         
@@ -134,5 +139,22 @@ public class TPlayer : MonoBehaviour
             }
         }
         moveCoroutine = null;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource가 없습니다. 확인해주세요.");
+            return;
+        }
+
+        if (clip == null)
+        {
+            Debug.LogWarning("재생할 AudioClip이 설정되지 않았습니다.");
+            return;
+        }
+
+        audioSource.PlayOneShot(clip);
     }
 }
