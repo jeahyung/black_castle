@@ -65,7 +65,7 @@ public class StageManager : MonoBehaviour
             LoadStage(currentStageIndex);
         }
 
-        if(currentStageIndex >= 5)
+        if(currentStageIndex >= 9)
         {
             Debug.Log("all clear");
         }
@@ -80,7 +80,7 @@ public class StageManager : MonoBehaviour
 
     private void UpdateStageText()
     {
-        if (currentStageIndex <= 4)
+        if (currentStageIndex <= 8)
         {
             stageText.text = "Stage: " + (currentStageIndex + 1);
         }

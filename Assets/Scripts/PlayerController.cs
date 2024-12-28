@@ -44,11 +44,14 @@ public class PlayerController : MonoBehaviour
     public AudioClip goalSound;
     public AudioClip LeverSound;
 
+    private float sc;
+    public float num = 2f;
    // public event Action slow;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        sc = audioSource.volume / num;
     }
     void Update()
     {
@@ -205,8 +208,17 @@ public class PlayerController : MonoBehaviour
 
     void PlaySound(AudioClip clip) //¼Ò¸®
     {
-        if (audioSource != null && clip != null)
+       
+        
+        if ((audioSource != null && clip != null) && isRunning)
         {
+            audioSource.volume = sc;
+            audioSource.PlayOneShot(clip);
+        }
+        else if (audioSource != null && clip != null)
+        {
+            audioSource.volume = num * sc;
+
             audioSource.PlayOneShot(clip);
         }
     }

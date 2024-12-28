@@ -121,7 +121,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8503189920067293651, guid: d495700f3f883f94db4e88de6dd9a8af, type: 3}
   stepPrefab: {fileID: 9077456828006656126, guid: e07ecceb4eaeb0b408c504feeafb79a1, type: 3}
   Walk_lifetime: 0.8
-  Run_lifetime: 0.2
+  Run_lifetime: 0.15
   Clap_lifetime: 3
   Walk_Shoot_CoolTime: 0.8
   Run_Shoot_CoolTime: 0.6
