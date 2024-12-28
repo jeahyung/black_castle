@@ -6,6 +6,8 @@ public class Bullets : MonoBehaviour
 {
     private Collider2D collider;
 
+    public Vector3 prePos;
+
     private void Start()
     {
         collider = GetComponent<Collider2D>();
@@ -15,6 +17,7 @@ public class Bullets : MonoBehaviour
     {
         if (collision.CompareTag("Wall"))
         {
+            prePos = transform.position;
             this.gameObject.GetComponent<MultiLineDraw>().CreateNewLineGroup();
             this.collider.enabled = false;
         }

@@ -54,6 +54,10 @@ public class StageManager : MonoBehaviour
 
     public void ReLoadStage()
     {
+        if (currentStage != null)
+        {
+            Destroy(currentStage);
+        }
         LoadStage(currentStageIndex);
     }
 
