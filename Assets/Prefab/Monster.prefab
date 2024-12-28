@@ -59,7 +59,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxReflections: 200
-  lineCount: 30
+  lineCount: 7
   lineMaterial: {fileID: 2100000, guid: 535191808b79f5a4c81b5b93751b8ae1, type: 2}
 --- !u!33 &5395074520116041405
 MeshFilter:
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 1
-  lineCreationInterval: 0.5
-  moveSpeed: 1
+  lineCreationInterval: 0.25
+  moveSpeed: 0.6
 --- !u!1 &5395074521015915888
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interval: 1
   lineCreationInterval: 0.5
-  moveSpeed: 1
+  moveSpeed: 0.6
 --- !u!1001 &1967232995802704370
 PrefabInstance:
   m_ObjectHideFlags: 0
