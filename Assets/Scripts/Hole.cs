@@ -75,17 +75,27 @@ public class Hole : MonoBehaviour
         }
         if (disappearObjects != null)
         {
-            foreach(GameObject obj in disappearObjects)
+            foreach (GameObject obj in disappearObjects)
             {
-                if(obj != null)
+                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+                if ((obj != null) && (obj.activeSelf) && (spriteRenderer.enabled))
                 {
-                    obj.SetActive(false);
+                    obj.GetComponent<MultiLineDraw>().CreateNewLineGroup();
+
+                    Collider2D collider = obj.GetComponent<Collider2D>();
+
+                    if (spriteRenderer != null)
+                    {
+                        spriteRenderer.enabled = false;
+                    }
+                    if (collider != null)
+                    {
+                        collider.enabled = false;
+                    }
                 }
             }
         }
-        else
-        {
-            Debug.LogWarning("createObjects array is null");
-        }
+
     }
 }
