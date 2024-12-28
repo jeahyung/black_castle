@@ -176,6 +176,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = StageManager.Instance.startPos.position; 
             lastMoveTime = MoveCool;
             PlaySound(trapSound);
+            StageManager.Instance.ReLoadStage();
         }
 
         if (other.CompareTag("Goal")) //다음 레벨로 넘어가는 목표점

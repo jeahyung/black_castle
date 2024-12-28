@@ -52,6 +52,12 @@ public class StageManager : MonoBehaviour
         UpdateStageText();
     }
 
+    public void ReLoadStage()
+    {
+        LoadStage(currentStageIndex);
+    }
+
+
     public void AdvanceStage()
     {
         if (currentStage != null)
