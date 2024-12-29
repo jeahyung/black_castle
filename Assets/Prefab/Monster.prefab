@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 7438646957089250755}
   - component: {fileID: 6281828040857619570}
   - component: {fileID: 1606069769508765889}
-  - component: {fileID: 2100422633503524940}
   - component: {fileID: 4380156062705934761}
+  - component: {fileID: 128068869176657385}
+  - component: {fileID: 4721388272711937876}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interval: 1
   lineCreationInterval: 0.6
-  moveSpeed: 0.6
+  moveSpeed: 0.7
   EnemySound: {fileID: 8300000, guid: 518665739fe33444fb5795db1ef518cf, type: 3}
 --- !u!82 &1606069769508765889
 AudioSource:
@@ -166,7 +167,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.33861738
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -242,7 +243,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &2100422633503524940
+--- !u!50 &4380156062705934761
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5395074520116041401}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!58 &128068869176657385
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5395074520116041401}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6488681
+--- !u!61 &4721388272711937876
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,29 +304,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &4380156062705934761
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5395074520116041401}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &5395074521015915888
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interval: 1
   lineCreationInterval: 0.5
-  moveSpeed: 0.6
+  moveSpeed: 5
   EnemySound: {fileID: 8300000, guid: 518665739fe33444fb5795db1ef518cf, type: 3}
 --- !u!58 &5223745210466840561
 CircleCollider2D:
@@ -354,7 +371,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.51
 --- !u!1001 &1967232995802704370
 PrefabInstance:
   m_ObjectHideFlags: 0

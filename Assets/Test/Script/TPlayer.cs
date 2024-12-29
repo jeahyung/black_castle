@@ -10,9 +10,9 @@ public class TPlayer : MonoBehaviour
     private float nextCallTime;
     //---------------------------달리기 중 숨쉬기-------------------------------------------
     public float lineCreationInterval = 0.5f; // 라인 생성 간격 (초)
-    private float lastLineCreationTime;    
+    private float lastLineCreationTime;
     //------------------------------------------------------------------------------------------
-    
+
     public float moveSpeed = 5f;
     //private Rigidbody2D rb;
     //private Vector2 movement;
@@ -23,7 +23,7 @@ public class TPlayer : MonoBehaviour
         Sleep,
         Find
     }
-
+    private Rigidbody2D rb;
     private MonsterState currentState;
     //-----------------------------------------------------------------------------------------
     private Vector2 target;
@@ -38,7 +38,7 @@ public class TPlayer : MonoBehaviour
 
     private void Start()
     {
-        //rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         player = FindObjectOfType<PlayerController>();
         line = GetComponent<MultiLineDraw>();
         currentState = MonsterState.Sleep;
@@ -55,7 +55,7 @@ public class TPlayer : MonoBehaviour
                 SleepState();
                 break;
             case MonsterState.Find:
-               // FindState();
+                // FindState();
                 break;
         }
     }
@@ -70,9 +70,9 @@ public class TPlayer : MonoBehaviour
         //    nextCallTime = Time.time + interval;
         //}
         //기본 순찰 이동 상태 구현
-    }    
+    }
 
-  
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,21 +91,20 @@ public class TPlayer : MonoBehaviour
 
     private IEnumerator MoveToPrePos()
     {
-        if ((player.prePos == null)||( player == null))
+        if ((player.prePos == null) || (player == null))
         {
-           // Debug.LogError("Player or prePos is null");
+            // Debug.LogError("Player or prePos is null");
             yield break;
         }
 
         while (true)
         {
-            Vector2 startPos = transform.position;
+            Vector2 startPos = rb.position; // Rigidbody2D의 현재 위치
             Vector2 targetPos = player.prePos;
             float journeyLength = Vector2.Distance(startPos, targetPos);
             float startTime = Time.time;
 
-
-            while ((Vector2)transform.position != targetPos)
+            while ((Vector2)rb.position != targetPos)
             {
                 float currentTime = Time.time;
 
@@ -115,7 +114,7 @@ public class TPlayer : MonoBehaviour
                     PlaySound(EnemySound);
                     line.CreateNewLineGroup();
                     lastLineCreationTime = currentTime;
-                }         
+                }
 
                 // 목표점이 변경되었는지 확인
                 if (targetPos != player.prePos)
@@ -125,21 +124,23 @@ public class TPlayer : MonoBehaviour
 
                 float distanceCovered = (Time.time - startTime) * moveSpeed;
                 float fractionOfJourney = distanceCovered / journeyLength;
-                transform.position = Vector2.Lerp(startPos, targetPos, fractionOfJourney);
-                
-                //일정 간격으로 
 
-                yield return null;
+                // Rigidbody2D를 사용하여 이동
+                Vector2 newPosition = Vector2.Lerp(startPos, targetPos, fractionOfJourney);
+                rb.MovePosition(newPosition);
+
+                yield return new WaitForFixedUpdate(); // FixedUpdate와 동기화
             }
 
             // 목표에 도달했거나 목표점이 변경되었을 때
-            if ((Vector2)transform.position == player.prePos)
+            if ((Vector2)rb.position == player.prePos)
             {
                 break; // 최종 목표에 도달했으면 코루틴 종료
             }
         }
         moveCoroutine = null;
     }
+
 
     private void PlaySound(AudioClip clip)
     {
